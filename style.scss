@@ -1,4 +1,4 @@
-// Переменные
+
 $primary-color: #3498db;
 $text-color: #333;
 $card-radius: 12px;
@@ -20,7 +20,7 @@ $font-main: 'Segoe UI', Arial, sans-serif;
   }
 }
 
-// Сброс базовых стилей
+
 body {
   margin: 0;
   padding: 40px;
@@ -32,7 +32,7 @@ body {
   min-height: 100vh;
 }
 
-// Карточка товара — вложенная структура селекторов
+
 .product-card {
   max-width: 360px;
   background: white;

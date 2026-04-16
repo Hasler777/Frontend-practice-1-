@@ -1,0 +1,79 @@
+// Переменные
+$primary-color: #3498db;
+$text-color: #333;
+$card-radius: 12px;
+$font-main: 'Segoe UI', Arial, sans-serif;
+
+// Миксин для кнопки
+@mixin button($bg-color) {
+  display: inline-block;
+  padding: 12px 24px;
+  background: $bg-color;
+  color: white;
+  border-radius: $card-radius;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #2980b9;
+  }
+}
+
+// Сброс базовых стилей
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: $font-main;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+// Карточка товара — вложенная структура селекторов
+.product-card {
+  max-width: 360px;
+  background: white;
+  border-radius: $card-radius;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  &__image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: $text-color;
+  }
+
+  &__description {
+    margin: 0 0 16px;
+    font-size: 14px;
+    color: #808080;
+    line-height: 1.5;
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    color: $primary-color;
+  }
+}
+
+// Кнопка с использованием миксина
+.btn {
+  @include button($primary-color);
+}
